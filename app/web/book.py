@@ -1,19 +1,21 @@
-from flask import make_response, jsonify, Blueprint
+from flask import make_response, jsonify, request
 from helper import is_isbn_or_key
 from yushu_book import YuShuBook
+from . import web
 
 # blueprint
 
-web = Blueprint('web', __name__)
 
-
-@web.route('/book/search/<q>/<page>')
-def search(q, page):
+@web.route('/book/search')
+def search():
     """
         q : 代表普通关键字 或者 isbn
         page
+        ?q=金庸&page=1
     :return:
     """
+    q = request.args['q']
+    page = request.args['page']
     isbn_or_key = is_isbn_or_key(q)
     if isbn_or_key == 'isbn':
         result = YuShuBook.search_by_isbn(q)
