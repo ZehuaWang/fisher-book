@@ -34,7 +34,7 @@ def search():
         return jsonify(result)
         # return json.dump(result), 200, {'content-type': 'application/json'}
     else:
-        return jsonify({'msg': 'Parameter Validation Failed'})
+        return jsonify(form.errors)
 
 
 # 定义视图函数
