@@ -29,6 +29,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/spider" />
+      <recent name="$PROJECT_DIR$/app/libs" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -92,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568565687317</updated>
       <workItem from="1568565709048" duration="39044000" />
-      <workItem from="1570401779477" duration="1679000" />
+      <workItem from="1570401779477" duration="2286000" />
     </task>
     <servers />
   </component>
