@@ -28,7 +28,7 @@ def search():
         if isbn_or_key == 'isbn':
             result = YuShuBook.search_by_isbn(q)
         else:
-            result = YuShuBook.search_by_keyword(q)
+            result = YuShuBook.search_by_keyword(q, page)
             # dict 序列化 -> 将results转为json
         # This is an API
         return jsonify(result)
