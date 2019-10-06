@@ -86,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568565687317</updated>
-      <workItem from="1568565709048" duration="34148000" />
+      <workItem from="1568565709048" duration="35664000" />
     </task>
     <servers />
   </component>
@@ -105,6 +105,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fisher$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1570390203669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fisher$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1570391977056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -1,7 +1,9 @@
 from flask import make_response, jsonify, request
 from helper import is_isbn_or_key
 from yushu_book import YuShuBook
+from app.forms.book import SearchForm
 from . import web
+
 
 # blueprint
 
@@ -15,16 +17,24 @@ def search():
     :return:
     """
     q = request.args['q']
+    # Add validation for q 限制长度
     page = request.args['page']
-    isbn_or_key = is_isbn_or_key(q)
-    if isbn_or_key == 'isbn':
-        result = YuShuBook.search_by_isbn(q)
+    # 验证层
+    form = SearchForm(request.args)
+    if form.validate():  # 通过验证 执行搜索
+        q = form.q.data.strip()
+        page = form.page.data
+        isbn_or_key = is_isbn_or_key(q)
+        if isbn_or_key == 'isbn':
+            result = YuShuBook.search_by_isbn(q)
+        else:
+            result = YuShuBook.search_by_keyword(q)
+            # dict 序列化 -> 将results转为json
+        # This is an API
+        return jsonify(result)
+        # return json.dump(result), 200, {'content-type': 'application/json'}
     else:
-        result = YuShuBook.search_by_keyword(q)
-        # dict 序列化 -> 将results转为json
-    # This is an API
-    return jsonify(result)
-    # return json.dump(result), 200, {'content-type': 'application/json'}
+        return jsonify({'msg': 'Parameter Validation Failed'})
 
 
 # 定义视图函数
