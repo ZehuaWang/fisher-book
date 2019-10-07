@@ -3,6 +3,7 @@ from flask import current_app
 
 
 class YuShuBook:
+    # 模型层 mvc m
     isbn_url = 'http://t.yushu.im/v2/book/isbn/{}'
     keyword_url = 'http://t.yushu.im/v2/book/search?q={}&count={}&start={}'
 
