@@ -3,7 +3,10 @@ from flask import Flask, make_response, jsonify
 # 如果当前文件是主动执行的，__name__ 变量的值就是：__main__，
 # 如果是被导入执行的，则是被导入的文件名
 from app import create_app
-
+# 请求上下文对象 Request
+# 应用上下文对象 Flask
+# Flask核心对象  存储在AppContext中
+# Request 存储在 RequestContext中
 app = create_app()
 
 
